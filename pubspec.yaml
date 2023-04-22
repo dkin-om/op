@@ -1,0 +1,16 @@
+name: {package_name}
+version: 0.1.0-nameclaim
+description: A Dart library
+repository: https://github.com/dkin-om/{package-repository-name}.git
+issue_tracker: https://github.com/dkin-om/{package-repository-name}/issues
+homepage: https://github.com/dkin-om/{package-repository-name}#readme
+environment:
+  sdk: '>=3.0.0-417.1.beta <4.0.0'
+dev_dependencies:
+  test: ^1.24.2
+screenshots:
+  - description: {package_name} package logo
+    path: img/logo.png
+funding:
+  - https://github.com/sponsors/dkin-om
+  - https://ko-fi.com/dkinom
