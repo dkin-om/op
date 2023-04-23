@@ -39,6 +39,7 @@ jobs:
         run: dart pub global run coverage:format_coverage --packages=.dart_tool/package_config.json --in=coverage/test/ --out=coverage/lcov.info --report-on=lib/ --lcov --check-ignore
 
       - name: Coveralls GitHub Action
+        if: false
         uses: coverallsapp/github-action@v2.1.2
 
       - name: Pub publish (dry-run)

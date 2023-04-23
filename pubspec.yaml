@@ -1,5 +1,5 @@
 name: op
-version: 0.1.0-rc.0
+version: 0.1.0
 description: A Dart library defining interfaces for mathematical operations, such as addition and multiplication
 repository: https://github.com/dkin-om/op.git
 issue_tracker: https://github.com/dkin-om/op/issues
