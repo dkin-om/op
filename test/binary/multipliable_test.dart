@@ -26,7 +26,7 @@ void main() {
 
 class RealNumber
     with EquatableMixin
-    implements Multipliable<RealNumber, RealNumber> {
+    implements MultipliableInternally<RealNumber> {
   RealNumber(this.value);
 
   final num value;

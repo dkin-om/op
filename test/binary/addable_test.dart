@@ -24,7 +24,7 @@ void main() {
   });
 }
 
-class Integer with EquatableMixin implements Addable<Integer, Integer> {
+class Integer with EquatableMixin implements AddableInternally<Integer> {
   Integer(this.value);
 
   final int value;

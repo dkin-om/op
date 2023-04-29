@@ -3,6 +3,7 @@ import 'package:op/op.dart';
 void main() {
   addable();
   multipliable();
+  negatable();
 }
 
 void addable() {
@@ -27,7 +28,15 @@ void multipliable() {
   print(product); // 28
 }
 
-class Integer implements Addable<Integer, Integer> {
+void negatable() {
+  final RealNumber operand = RealNumber(65.47);
+  print(operand); // 65.47
+
+  final RealNumber negation = -operand;
+  print(negation); // -65.47
+}
+
+class Integer implements AddableInternally<Integer> {
   Integer(this.value);
 
   final int value;
@@ -39,13 +48,17 @@ class Integer implements Addable<Integer, Integer> {
   String toString() => value.toString();
 }
 
-class RealNumber implements Multipliable<RealNumber, RealNumber> {
+class RealNumber
+    implements MultipliableInternally<RealNumber>, Negatable<RealNumber> {
   RealNumber(this.value);
 
   final num value;
 
   @override
   RealNumber operator *(RealNumber y) => RealNumber(value * y.value);
+
+  @override
+  RealNumber operator -() => RealNumber(-value);
 
   @override
   String toString() => value.toString();
